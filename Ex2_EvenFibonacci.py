@@ -1,4 +1,4 @@
-def fibonacci(maximo):
+def fibonacci(maxi):
     ''' (int) -> list
 
         Return the Fibonacci sequence with the maximum value given by maximo.
@@ -8,7 +8,7 @@ def fibonacci(maximo):
 
     fibo = [1,2]
 
-    while fibo[-1] <= maximo:
+    while fibo[-1] < maxi:
         fibo.append(fibo[-1]+fibo[-2])
 
     return fibo
