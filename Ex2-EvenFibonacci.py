@@ -5,6 +5,14 @@ def fibonacci(maximo):
 
         fibonacci(89) -> [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
         '''
+
+        fibonacci = [1,2]
+
+        while fibonacci[-1] <= maximo:
+            fibonacci.append(fibonacci[-1]+fibonacci[-2])
+
+        return fibonacci
+        
 def sum_even(x):
     ''' (list) -> int
 
