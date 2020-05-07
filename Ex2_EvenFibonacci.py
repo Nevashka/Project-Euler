@@ -6,12 +6,12 @@ def fibonacci(maximo):
         fibonacci(89) -> [1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
         '''
 
-        fibo = [1,2]
+    fibo = [1,2]
 
-        while fibo[-1] <= maximo:
-            fibo.append(fibo[-1]+fibo[-2])
+    while fibo[-1] <= maximo:
+        fibo.append(fibo[-1]+fibo[-2])
 
-        return fibo
+    return fibo
 
 def sum_even(maximo):
     ''' (list) -> int
