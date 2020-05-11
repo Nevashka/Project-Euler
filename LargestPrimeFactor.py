@@ -1,6 +1,6 @@
 #Problem 3: What is the largest prime factor of the number 600851475143 ?
 
-def primes(number):
+def total_primes(number):
     ''' (int) -> list
 
     Return a list with all primes lower than number.
@@ -23,17 +23,21 @@ def primes(number):
 
     return all_primes
 
-#def primefactors (number):
-#    ''' (int) -> list
+def primefactors (number):
+    ''' (int) -> int
 
-#    Return a list with the prime factors of a number.
+    Return the largest prime factor of a number.
 
-#    primes(13195) -> [5,7,13,29]
+    primes(13195) -> 29
 '''
 
-#    factors = []
-#    primes = [2,3,5,7]
-#    for i in range (2,number):
+    factors = []
+    primes = total_primes(number)
 
+    for i in primes:
+        if number % i == 0:
+            factors.append(i)
+            while number % i == 0:
+                number = number / i
 
-#    return True
+    return max(factors)
