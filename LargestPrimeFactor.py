@@ -41,12 +41,14 @@ def next_prime(prime):
         next = next + 1
 
 
-def primefactors (number):
+def largestfactor (number):
     ''' (int) -> int
 
     Return the largest prime factor of a number.
 
-    primes(13195) -> 29
+    largestfactor(13195) -> 29
+    largest factor (600851475143) -> 6857
+
 '''
 
     factors = []
