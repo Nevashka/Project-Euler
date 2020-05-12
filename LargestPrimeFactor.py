@@ -23,21 +23,23 @@ def total_primes(number):
 
     return all_primes
 
-def next_prime(next):
+def next_prime(prime):
     ''' (int) -> int
 
     Return the next prime number
 
     next_prime(13) -> 17
     next_prime(31) -> 37'''
-
+    next = prime + 1
+    
     while True:
-        next = next + 1
-        for i in range(1,next+1):
-            if next%i == 0 and i!=next:
-                break
-            elif i == next:
+        for i in range(2,next+1):
+            if i == next:
                 return next
+                prime = True
+            elif next%i == 0:
+                break
+        next = next + 1
 
 
 def primefactors (number):
