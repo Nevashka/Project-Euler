@@ -33,10 +33,10 @@ def next_prime(next):
 
     while True:
         next = next + 1
-        for i in range(1,x+1):
-            if x%i == 0 and i!=x:
+        for i in range(1,next+1):
+            if next%i == 0 and i!=next:
                 break
-            elif i == x:
+            elif i == next:
                 return next
 
 
@@ -51,10 +51,12 @@ def primefactors (number):
     factors = []
     prime = 2
 
-    for i in primes:
-        if number % i == 0:
-            factors.append(i)
-            while number % i == 0:
-                number = number / i
-
-    return max(factors)
+    while True:
+        if number % prime == 0 and number != 1:
+            number = number / prime
+            if prime not in factors:
+                factor.append(prime)
+        elif number == 1:
+            return max(factors)
+        else:
+            prime = next_prime(prime)
