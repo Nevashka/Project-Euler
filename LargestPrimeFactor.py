@@ -12,7 +12,7 @@ def total_primes(number):
     all_primes = [2,3,5,7,11,13,17,19]
     maximo = 19
 
-    while maximo < number:
+    while maximo < maximo + 1:
         maximo = maximo + 1
         for i in range(2,number):
             if maximo % i == 0 and i != maximo:
@@ -23,6 +23,23 @@ def total_primes(number):
 
     return all_primes
 
+def next_prime(next):
+    ''' (int) -> int
+
+    Return the next prime number
+
+    next_prime(13) -> 17
+    next_prime(31) -> 37'''
+
+    while True:
+        next = next + 1
+        for i in range(1,x+1):
+            if x%i == 0 and i!=x:
+                break
+            elif i == x:
+                return next
+
+
 def primefactors (number):
     ''' (int) -> int
 
@@ -32,7 +49,7 @@ def primefactors (number):
 '''
 
     factors = []
-    primes = total_primes(number)
+    prime = 2
 
     for i in primes:
         if number % i == 0:
