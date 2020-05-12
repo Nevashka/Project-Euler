@@ -31,12 +31,11 @@ def next_prime(prime):
     next_prime(13) -> 17
     next_prime(31) -> 37'''
     next = prime + 1
-    
+
     while True:
         for i in range(2,next+1):
             if i == next:
                 return next
-                prime = True
             elif next%i == 0:
                 break
         next = next + 1
@@ -57,7 +56,7 @@ def primefactors (number):
         if number % prime == 0 and number != 1:
             number = number / prime
             if prime not in factors:
-                factor.append(prime)
+                factors.append(prime)
         elif number == 1:
             return max(factors)
         else:
