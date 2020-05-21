@@ -8,3 +8,12 @@ def smallest_multiple(x,y):
 
     smallest_multiple(1,10) -> 2520
     '''
+    multiple = y*2
+
+    while True:
+        for i in range(x,y+1):
+            if multiple % i != 0:
+                break
+            elif i == y:
+                return multiple
+        multiple = multiple + y
