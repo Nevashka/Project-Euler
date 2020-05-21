@@ -7,6 +7,7 @@ def smallest_multiple(x,y):
     without any remainder.
 
     smallest_multiple(1,10) -> 2520
+    smallest_multiple(1,20) -> 232792560
     '''
     multiple = y*2
 
